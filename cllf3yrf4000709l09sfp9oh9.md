@@ -138,6 +138,26 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
     * You can refer [this](https://kubernetes.io/docs/concepts/workloads/pods/) for the code documentation
         
+    * Lets understand and breakdown the above code :
+        
+        * `apiVersion: v1`: Specifies the Kubernetes API version being used. In this case, it's the core/v1 API version.
+            
+        * `kind: Pod`: Indicates that the YAML configuration is defining a Kubernetes Pod.
+            
+        * `metadata`: Contains metadata information about the Pod. In this case, the only metadata provided is the name of the Pod, which is set to "nginx".
+            
+        * `spec`: Describes the desired state of the Pod.
+            
+            * `containers`: Specifies an array of containers that should run within the Pod. In this case, there is a single container being defined.
+                
+                * `name: nginx`: Specifies the name of the container as "nginx".
+                    
+                * `image: nginx:1.14.2`: Specifies the Docker image to be used for the container. The image "nginx:1.14.2" will be pulled from a container registry (like Docker Hub) and used to run the container. This is the official NGINX image version 1.14.2.
+                    
+                * `ports`: Specifies an array of port mappings for the container. In this case, a single port mapping is defined:
+                    
+                    * `containerPort: 80`: Specifies that the container exposes port 80. This means that the container's application (NGINX in this case) is expected to be reachable via port 80 within the container.
+                        
     * Now to check if pod is created or not , use `kubectl get pods` and `kubectl get pods -o wide` for a detailed view.
         
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272502536/c4dbd6ab-cfe4-439e-a762-f762ebc8e454.png align="center")
