@@ -43,7 +43,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
 * Update the indexing of your system using `sudo apt update`
     
-* Let's start with install Kubectl first , I hope you know what is kubectl refer [this](https://srdev.hashnode.dev/getting-started-with-kubernetes) and [this](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) for Kubectl installation
+* Let's start with installing Kubectl first, I hope you know what is kubectl refer [this](https://srdev.hashnode.dev/getting-started-with-kubernetes) and for Kubectl installation
     
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -121,7 +121,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
 
 ### Let's Create our first pod on Kubernetes using Minikube
 
-* Create a file pod. yaml and paste the below code :
+* Create a file pod.yaml and paste the below code :
     
     ```yaml
     apiVersion: v1
@@ -133,7 +133,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
       - name: nginx
         image: nginx:1.14.2
         ports:
-        - containerPort: 8000
+        - containerPort: 80
     ```
     
     * You can refer [this](https://kubernetes.io/docs/concepts/workloads/pods/) for the code documentation
