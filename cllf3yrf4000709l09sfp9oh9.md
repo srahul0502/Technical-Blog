@@ -57,7 +57,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272297167/0f854798-505b-430e-9d95-a19b86bb356e.png align="center")
     
-* Now, Install docker if you didn't, i mentioned it in the pre-requisites as well
+* Now, Install docker if you didn't, I mentioned it in the pre-requisites as well
     
     ```bash
     # updating and installing docker
@@ -136,9 +136,9 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
         - containerPort: 80
     ```
     
-    * You can refer [this](https://kubernetes.io/docs/concepts/workloads/pods/) for the code documentation
+    * You can refer [to this](https://kubernetes.io/docs/concepts/workloads/pods/) for the code documentation
         
-    * Lets understand and breakdown the above code :
+    * Let's understand and breakdown the above code :
         
         * `apiVersion: v1`: Specifies the Kubernetes API version being used. In this case, it's the core/v1 API version.
             
@@ -158,11 +158,13 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
                     
                     * `containerPort: 80`: Specifies that the container exposes port 80. This means that the container's application (NGINX in this case) is expected to be reachable via port 80 within the container.
                         
-    * Now to check if pod is created or not , use `kubectl get pods` and `kubectl get pods -o wide` for a detailed view.
+    * Now to check if the pod is created or not, use `kubectl get pods` and
+        
+        `kubectl get pods -o wide` for a detailed view.
         
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272502536/c4dbd6ab-cfe4-439e-a762-f762ebc8e454.png align="center")
         
-    * As you can see our pod i running on IP : 10.244.0.3
+    * As you can see our pod is running on IP : 10.244.0.3
         
     * Let's check it, we have to inside the Kubernetes cluster, minikube makes this really easy, just type `minikube ssh` to get inside and then use curl to get the data from the IP
         
