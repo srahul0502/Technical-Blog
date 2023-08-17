@@ -32,9 +32,9 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
 
 ## 🛠️ Prerequisites
 
-* Make sure you have installed docker correctly and added user to the docker group
+* Make sure you have installed docker correctly and added the user to the docker group, and restart once after adding a user to the docker group.
     
-* If you are using AWS instance the use t2.medium having 2-CPU because Minikube requires 2 CPU's . As we have discussed in previous blog , there are two servers Master and Worker both utilizes 1 complete CPU so we use t2.medium.
+* If you are using an AWS instance use t2.medium having 2-CPU because Minikube requires 2 CPUs. As we have discussed in the previous blog, there are two servers Master and Worker both utilize 1 complete CPU so we use t2.medium.
     
 
 ## 🚀 Installing Minikube
@@ -43,7 +43,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
 * Update the indexing of your system using `sudo apt update`
     
-* Let's start with install kubectl first , i hope you know what is kubectl refer [this](https://srdev.hashnode.dev/getting-started-with-kubernetes) and [this](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) for kubectl installation
+* Let's start with install Kubectl first , I hope you know what is kubectl refer [this](https://srdev.hashnode.dev/getting-started-with-kubernetes) and [this](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/) for Kubectl installation
     
     ```bash
     curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
@@ -57,7 +57,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272297167/0f854798-505b-430e-9d95-a19b86bb356e.png align="center")
     
-* Now , Install docker if you didn't , i mentioned it in pre-requisites as well
+* Now, Install docker if you didn't, i mentioned it in the pre-requisites as well
     
     ```bash
     # updating and installing docker
@@ -66,7 +66,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     sudo usermod -aG docker $USER
     ```
     
-* Now we'll install conntrack, It is used by Kubernetes to keep track of the connections between pods and services. This is necessary because Kubernetes uses a stateful networking model, where each pod has its own IP address and port.
+* Now we'll install Conntrack, It is used by Kubernetes to keep track of the connections between pods and services. This is necessary because Kubernetes uses a stateful networking model, where each pod has its own IP address and port.
     
     ```bash
     sudo apt install conntrack -y
@@ -74,7 +74,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272371880/22aa2ec9-452a-4d70-a26e-5da9751508a1.png align="center")
     
-* Here come's the Minikube installation , you can refer this [doc](https://minikube.sigs.k8s.io/docs/start/)
+* Here come's the Minikube installation, you can refer to this [doc](https://minikube.sigs.k8s.io/docs/start/)
     
     ```bash
     # this is there in the document,this installs minikube directly in local/bin
@@ -87,9 +87,9 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272383999/ba33ca2f-d6f3-4db0-8ca6-2ce6c56f0ca3.png align="center")
     
-* Now , we need a driver (VM or docker) to run the minikube , so we'll use docker as a driver to run the minikube
+* Now, we need a driver (VM or docker) to run the minikube, so we'll use docker as a driver to run the minikube
     
-* For this you have to give permission to docker , we have already given while installing docker but you can also use this:
+* For this you have to give permission to docker, we have already given while installing docker but you can also use this:
     
     ```bash
     sudo usermod -aG docker $USER & newgrp docker
@@ -108,7 +108,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272415642/8d7266a4-9233-4353-bef1-7daf75e7a43d.png align="center")
         
 
-## Let's understand the concept **pod**
+## Let's understand the concept of **pod**
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692273019923/6cf63cb3-9cbb-484e-9cad-f060e2244a49.png align="center")
 
@@ -121,7 +121,7 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
 
 ### Let's Create our first pod on Kubernetes using Minikube
 
-* Create a file pod.yaml and paste the below code :
+* Create a file pod. yaml and paste the below code :
     
     ```yaml
     apiVersion: v1
@@ -142,9 +142,9 @@ tags: kubernetes, devops, technical-writing-1, devops-articles, 90daysofdevops
         
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272502536/c4dbd6ab-cfe4-439e-a762-f762ebc8e454.png align="center")
         
-    * As you can see our pod i runnin on IP : 10.244.0.3
+    * As you can see our pod i running on IP : 10.244.0.3
         
-    * Let's check it , we have to inside the kubernetes cluster , minikube makes this really easy , just type `minikube ssh` to get inside and then use curl to get the data from the IP
+    * Let's check it, we have to inside the Kubernetes cluster, minikube makes this really easy, just type `minikube ssh` to get inside and then use curl to get the data from the IP
         
         ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692272657701/c6c9efe0-78f9-49ce-8d69-9f2edb127fd7.png align="center")
         
