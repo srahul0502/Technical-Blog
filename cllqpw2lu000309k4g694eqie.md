@@ -24,6 +24,8 @@ Kubernetes Services establishes a stable, easy-to-find address that enables diff
 
 Kubernetes offers various Service types, each with a unique role. Let's explore them using relatable examples:
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1692982191066/e133f949-4312-48dc-8276-3099d78fa1d4.gif align="center")
+
 ### **1\. ClusterIP Service**
 
 * **Purpose**: A ClusterIP Service acts like an internal phone system within a company. It enables different teams within your application to communicate privately, excluding external interference.
