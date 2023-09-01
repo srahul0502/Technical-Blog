@@ -123,7 +123,7 @@ sudo systemctl enable mongod
 
 ### **Step 8: Create MongoDB Configuration for Replica Set**
 
-```bash
+```yaml
 # ... (Configuration Details) ...
 replication:
   replSetName: "rs0"
