@@ -166,6 +166,7 @@ replication:
     
     replication:
       replSetName: "rs0"
+
     ```
     
 
