@@ -170,13 +170,6 @@ replication:
     replication:
       replSetName: "rs0"
     
-    #sharding:
-    
-    ## Enterprise-Only Options:
-    
-    #auditLog:
-    
-    #snmp:
     ```
     
 
