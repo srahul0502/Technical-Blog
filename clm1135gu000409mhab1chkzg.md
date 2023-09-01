@@ -131,7 +131,7 @@ replication:
 
 * **Purpose**: Create a configuration file specifying data path, port, and replication settings.
     
-    ```yaml
+    ```plaintext
     # mongod.conf
     
     # for documentation of all options, see:
