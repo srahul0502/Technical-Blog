@@ -7,18 +7,16 @@ tags: mongodb, devops, devops-articles
 
 ---
 
----
 
 ## **Prerequisites:**
 
 Before running this script, ensure you have the following prerequisites met:
 
 1. **Linux Environment:** This script is designed for a Linux-based operating system. It's been tested on Ubuntu but should work on other Debian-based distributions.
-    
+
 2. **Root or Sudo Access:** You need root or sudo privileges to execute the installation and configuration steps.
-    
+
 3. **Internet Connection:** Make sure your server has access to the internet to download required packages and MongoDB.
-    
 
 ---
 
@@ -34,10 +32,9 @@ Now, let's break down the script into clear steps:
 sudo apt update
 ```
 
-* **Purpose**: Update the list of available software packages on your system.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598354875/0fcb1ec5-2ea1-4d5b-ba63-e40dfa783184.png align="center")
-    
+- **Purpose**: Update the list of available software packages on your system.
+
+![Step 1 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598354875/0fcb1ec5-2ea1-4d5b-ba63-e40dfa783184.png)
 
 ---
 
@@ -47,10 +44,9 @@ sudo apt update
 sudo apt-get install -y gnupg curl
 ```
 
-* **Purpose**: Install necessary packages `gnupg` and `curl` for handling MongoDB setup.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598382830/79c5c865-083b-4a74-b090-c30953c78631.png align="center")
-    
+- **Purpose**: Install necessary packages `gnupg` and `curl` for handling MongoDB setup.
+
+![Step 2 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598382830/79c5c865-083b-4a74-b090-c30953c78631.png)
 
 ---
 
@@ -60,8 +56,7 @@ sudo apt-get install -y gnupg curl
 curl -fsSL https://www.mongodb.org/static/pgp/server-5.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-archive-keyring.gpg
 ```
 
-* **Purpose**: Download MongoDB's GPG key and store it in a secure location.
-    
+- **Purpose**: Download MongoDB's GPG key and store it in a secure location.
 
 ---
 
@@ -71,10 +66,9 @@ curl -fsSL https://www.mongodb.org/static/pgp/server-5.0.asc | sudo gpg --dearmo
 echo "deb [signed-by=/usr/share/keyrings/mongodb-archive-keyring.gpg] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/5.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-5.0.list
 ```
 
-* **Purpose**: Add the MongoDB repository to your list of trusted software sources.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598427155/53fb417d-6323-4b34-81c7-df775c5f2e7e.png align="center")
-    
+- **Purpose**: Add the MongoDB repository to your list of trusted software sources.
+
+![Step 4 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598427155/53fb417d-6323-4b34-81c7-df775c5f2e7e.png)
 
 ---
 
@@ -84,8 +78,7 @@ echo "deb [signed-by=/usr/share/keyrings/mongodb-archive-keyring.gpg] https://re
 sudo apt-get update
 ```
 
-* **Purpose**: Update the package list with the MongoDB repository included.
-    
+- **Purpose**: Update the package list with the MongoDB repository included.
 
 ---
 
@@ -96,10 +89,9 @@ wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubun
 sudo dpkg -i libssl1.1_1.1.1f-1ubuntu2_amd64.deb
 ```
 
-* **Purpose**: Download and install `libssl1.1`, a library MongoDB depends on.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598445330/101b5420-0870-4905-96bd-bb00b29f4385.png align="center")
-    
+- **Purpose**: Download and install `libssl1.1`, a library MongoDB depends on.
+
+![Step 6 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598445330/101b5420-0870-4905-96bd-bb00b29f4385.png)
 
 ---
 
@@ -112,12 +104,10 @@ sudo systemctl daemon-reload
 sudo systemctl enable mongod
 ```
 
-* **Purpose**: Install MongoDB, start its service, reload the configuration, and enable it to start automatically.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598482847/ea89cf02-997b-43fa-9eb2-227c23b4cf9d.png align="center")
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598466260/63ba183d-e75f-4b8a-b117-37c0196a7468.png align="center")
-    
+- **Purpose**: Install MongoDB, start its service, reload the configuration, and enable it to start automatically.
+
+![Step 7 Image 1](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598466260/63ba183d-e75f-4b8a-b117-37c0196a7468.png)
+![Step 7 Image 2](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598482847/ea89cf02-997b-43fa-9eb2-227c23b4cf9d.png)
 
 ---
 
@@ -129,46 +119,42 @@ replication:
   replSetName: "rs0"
 ```
 
-* **Purpose**: Create a configuration file specifying data path, port, and replication settings.
-    
-    ```yaml
-    
-    # for documentation of all options, see:
-    # Where and how to store data.
-    storage:
-      dbPath: /var/lib/mongodb
-      journal:
-        enabled: true
-      wiredTiger:
-        engineConfig:
-          cacheSizeGB: 1
-    
-    # where to write logging data.
-    systemLog:
-      destination: file
-      logAppend: true
-      path: /var/log/mongodb/mongod.log
-    
-    # network interfaces
-    net:
-      port: 27017
-      bindIp: 127.0.0.1
-    
-    
-    # how the process runs
-    processManagement:
-      timeZoneInfo: /usr/share/zoneinfo
-    
-    # The following lines disable JavaScript execution.
-    security:
-      javascriptEnabled: false
-    #operationProfiling:
-    
-    replication:
-      replSetName: "rs0"
+- **Purpose**: Create a configuration file specifying data path, port, and replication settings.
 
-    ```
-    
+```yaml
+# for documentation of all options, see:
+# Where and how to store data.
+storage:
+  dbPath: /var/lib/mongodb
+  journal:
+    enabled: true
+  wiredTiger:
+    engineConfig:
+      cacheSizeGB: 1
+
+# where to write logging data.
+systemLog:
+  destination: file
+  logAppend: true
+  path: /var/log/mongodb/mongod.log
+
+# network interfaces
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+
+# how the process runs
+processManagement:
+  timeZoneInfo: /usr/share/zoneinfo
+
+# The following lines disable JavaScript execution.
+security:
+  javascriptEnabled: false
+#operationProfiling:
+
+replication:
+  replSetName: "rs0"
+```
 
 ---
 
@@ -178,8 +164,7 @@ replication:
 sudo mongod --config /etc/mongod.conf
 ```
 
-* **Purpose**: Start MongoDB using the newly created configuration file.
-    
+- **Purpose**: Start MongoDB using the newly created configuration file.
 
 ---
 
@@ -189,8 +174,7 @@ sudo mongod --config /etc/mongod.conf
 sudo systemctl restart mongod
 ```
 
-* **Purpose**: Restart MongoDB to apply the changes.
-    
+- **Purpose**: Restart MongoDB to apply the changes.
 
 ---
 
@@ -200,10 +184,9 @@ sudo systemctl restart mongod
 sudo mongod --dbpath "/var/lib/mongodb" --logpath "/var/lib/mongodb/log/mongod.log" --port 27017 --storageEngine=wiredTiger --wiredTigerCacheSizeGB 1 --journal --replSet rs0 --noScripting
 ```
 
-* **Purpose**: Launch the initial MongoDB instance with specific settings.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598755783/4c7ff005-f570-4c6e-8a12-9d40ba429780.png align="center")
-    
+- **Purpose**: Launch the initial MongoDB instance with specific settings.
+
+![Step 11 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598755783/4c7ff005-f570-4c6e-8a12-9d40ba429780.png)
 
 ---
 
@@ -213,8 +196,7 @@ sudo mongod --dbpath "/var/lib/mongodb" --logpath "/var/lib/mongodb/log/mongod.l
 mongo --port 27017 --eval "..."
 ```
 
-* **Purpose**: Use the MongoDB shell to set up the replica set configuration, add members, and an arbiter.
-    
+- **Purpose**: Use the MongoDB shell to set up the replica set configuration, add members, and an arbiter.
 
 ---
 
@@ -225,10 +207,11 @@ mongo --port 27017 --eval "rs.status()"
 echo "MongoDB replica set setup is complete."
 ```
 
-* **Purpose**: Check and display the status of the replica set and confirm the setup's completion.
-    
-    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598783232/17e00c85-3fa3-4804-8aaf-8ce3ea8b1d15.png align="center")
-    
+- **Purpose**: Check and display the status
+
+ of the replica set and confirm the setup's completion.
+
+![Step 13 Image](https://cdn.hashnode.com/res/hashnode/image/upload/v1693598783232/17e00c85-3fa3-4804-8aaf-8ce3ea8b1d15.png)
 
 ---
 
