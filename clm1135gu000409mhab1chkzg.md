@@ -131,7 +131,7 @@ replication:
 
 * **Purpose**: Create a configuration file specifying data path, port, and replication settings.
     
-    ```plaintext
+    ```bash
     # mongod.conf
     
     # for documentation of all options, see:
@@ -169,7 +169,6 @@ replication:
     
     replication:
       replSetName: "rs0"
-    
     ```
     
 
