@@ -131,12 +131,9 @@ replication:
 
 * **Purpose**: Create a configuration file specifying data path, port, and replication settings.
     
-    ```bash
-    # mongod.conf
+    ```yaml
     
     # for documentation of all options, see:
-    #   http://docs.mongodb.org/manual/reference/configuration-options/
-    
     # Where and how to store data.
     storage:
       dbPath: /var/lib/mongodb
@@ -174,7 +171,7 @@ replication:
 
 ---
 
-### **Step 9: Start MongoDB with New Configuration**
+### **Step 9: Start MongoDB with the New Configuration**
 
 ```bash
 sudo mongod --config /etc/mongod.conf
