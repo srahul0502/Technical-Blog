@@ -604,7 +604,7 @@ The choice between a multinode cluster and a single-node cluster in Kubernetes d
 
 In Kubernetes, `create` and `apply` are two different ways to manage resources like pods, services, deployments, and more. They serve distinct purposes and have different behaviors:
 
-**1\.** `kubectl create`
+**1.** `kubectl create`
 
 * `kubectl create` is a command used to create resources in a Kubernetes cluster. When you use `create`, you typically provide a YAML or JSON file that defines the resource you want to create.
     
@@ -619,7 +619,7 @@ In Kubernetes, `create` and `apply` are two different ways to manage resources l
 kubectl create -f my-pod.yaml
 ```
 
-**2\.** `kubectl apply`
+**2.** `kubectl apply`
 
 * `kubectl apply` is a more versatile command used to create, update, or modify resources in a Kubernetes cluster. Like `create`, you provide a YAML or JSON file defining the desired state of the resource.
     
@@ -637,3 +637,6 @@ kubectl apply -f my-pod.yaml
 ```
 
 kubectl create`is used for one-time resource creation, while`kubectl apply`is more versatile, allowing you to create and manage resources in a declarative manner, including updates and modifications.`apply\` is particularly useful when you want to maintain a desired state for resources over time and manage them consistently.
+
+> All the best for your Interview !!  
+> Happy Learning :D
