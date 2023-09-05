@@ -3,6 +3,7 @@ title: "Unlocking the Secrets of Kubernetes: Dive into Container Orchestration w
 datePublished: Tue Sep 05 2023 06:59:41 GMT+0000 (Coordinated Universal Time)
 cuid: clm5yn9yf000v0ajzesk65l95
 slug: unlocking-the-secrets-of-kubernetes-dive-into-container-orchestration-with-interview-questions
+ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1693901658368/73c8fc27-bd6e-4842-b701-7601b97bcf33.png
 tags: kubernetes, devops, containers, orchestration, 90daysofdevops
 
 ---
