@@ -131,7 +131,7 @@ spec:
 
 # 4\. How does Kubernetes handle scaling of applications⁉️
 
-![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693896786816/721eba2d-6cef-4262-86f6-0726bd7ea665.jpeg align="center")
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1693897501317/34ce018e-9a8f-4847-b806-8d16ca5f0e53.jpeg align="center")
 
 Kubernetes provides multiple mechanisms to handle the scaling of applications, allowing you to adjust the number of running instances of your containers based on demand. Here's how Kubernetes handles the scaling of applications:
 
