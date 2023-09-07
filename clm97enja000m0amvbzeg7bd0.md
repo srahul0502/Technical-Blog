@@ -9,7 +9,7 @@ tags: aws, devops, devops-articles, 90daysofdevops, 90daysofdevops-chanllenge
 
 ---
 
-# AWS:
+# ☁️AWS:
 
 Amazon Web Services is one of the most popular Cloud Provider that has free tier too for students and Cloud enthutiasts for their Handson while learning (Create your free account today to explore more on it).
 
@@ -26,13 +26,13 @@ You can read more about it from [here](https://aws.amazon.com/what-is-aws/)
 * You can read more about it from [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html)
     
 
-# IAM:
+# ☁️IAM:
 
 AWS Identity and Access Management (IAM) is a web service that helps you securely control access to AWS resources. With IAM, you can centrally manage permissions that control which AWS resources users can access. You use IAM to control who is authenticated (signed in) and authorized (has permissions) to use resources.
 
 You can read more about itfrom [here](https://docs.aws.amazon.com/IAM/latest/UserGuide/introduction.html)
 
-# Hands-On Practice :
+# ☁️Hands-On Practice :
 
 ### **Task 1: Launch EC2 Instance with Pre-installed Jenkins and Verify Accessibility**
 
