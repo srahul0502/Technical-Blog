@@ -63,7 +63,14 @@ CLB is an older load balancer type operating at **Layer 4**, primarily suited fo
 * **HTTP and TCP Load Balancing:** It supports both HTTP/HTTPS and TCP/SSL load balancing.
     
 
-# Task 1: Setting up EC2 Instances with Apache Web Server
+# ☁️ Hands-On Practice
+
+In this combined task, we'll first set up two EC2 instances using Ubuntu AMIs and utilize User Data to install the Apache Web Server. We'll go a step further by customizing the index.html file for each instance—one proudly displaying your name or customizing as you need
+
+Then, we'll seamlessly transition into Task 2, where we'll dive into the realm of Application Load Balancers (ALB) within AWS. Using the AWS Management Console, we'll create an ALB and add the EC2 instances configured in Task 1 as target groups. Our mission here is to ensure that the ALB works flawlessly, and we'll achieve that by meticulously checking the health status of the target instances and testing the load balancing capabilities it offers. It's an exciting journey into the heart of AWS infrastructure, where performance and reliability shine.  
+  
+
+## Task 1: Setting up EC2 Instances with Apache Web Server
 
 ## Step 1: Launch Two EC2 Instances
 
