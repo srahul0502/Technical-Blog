@@ -67,12 +67,11 @@ CLB is an older load balancer type operating at **Layer 4**, primarily suited fo
 
 In this combined task, we'll first set up two EC2 instances using Ubuntu AMIs and utilize User Data to install the Apache Web Server. We'll go a step further by customizing the index.html file for each instance—one proudly displaying your name or customizing as you need
 
-Then, we'll seamlessly transition into Task 2, where we'll dive into the realm of Application Load Balancers (ALB) within AWS. Using the AWS Management Console, we'll create an ALB and add the EC2 instances configured in Task 1 as target groups. Our mission here is to ensure that the ALB works flawlessly, and we'll achieve that by meticulously checking the health status of the target instances and testing the load balancing capabilities it offers. It's an exciting journey into the heart of AWS infrastructure, where performance and reliability shine.  
-  
+Then, we'll seamlessly transition into Task 2, where we'll dive into the realm of Application Load Balancers (ALB) within AWS. Using the AWS Management Console, we'll create an ALB and add the EC2 instances configured in Task 1 as target groups. Our mission here is to ensure that the ALB works flawlessly, and we'll achieve that by meticulously checking the health status of the target instances and testing the load balancing capabilities it offers. It's an exciting journey into the heart of AWS infrastructure, where performance and reliability shine.
 
 ## Task 1: Setting up EC2 Instances with Apache Web Server
 
-## Step 1: Launch Two EC2 Instances
+### Step 1: Launch Two EC2 Instances
 
 * Log in to your AWS Management Console.
     
@@ -108,7 +107,7 @@ echo "<h1 style='font-weight: bold;'> Welcome, Marvel Superfan! </h1><p>You've s
 * We have done the same in the previous blogs, you can refer it here if you get stuck in the above steps: [blog](https://srdev.hashnode.dev/hands-on-practice-launching-an-ec2-instance-with-jenkins-and-iam-role-creation)
     
 
-## Step 2: Copy Public IP Addresses
+### Step 2: Copy Public IP Addresses
 
 * Once the instances are running, go to the EC2 dashboard.
     
@@ -117,7 +116,7 @@ echo "<h1 style='font-weight: bold;'> Welcome, Marvel Superfan! </h1><p>You've s
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694174219062/6e4415e6-a823-48f7-b08e-822c0685739d.png align="center")
 
-## Step 3: Access Apache Web Servers
+### Step 3: Access Apache Web Servers
 
 * Open a web browser.
     
@@ -130,9 +129,9 @@ echo "<h1 style='font-weight: bold;'> Welcome, Marvel Superfan! </h1><p>You've s
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694174253292/730c68a3-a749-4633-a190-13f3133f91a4.png align="center")
     
 
-# Task 2: Creating an Application Load Balancer (ALB)
+## Task 2: Creating an Application Load Balancer (ALB)
 
-## Step 1: Create an Application Load Balancer
+### Step 1: Create an Application Load Balancer
 
 * Log in to your AWS Management Console.
     
@@ -155,7 +154,7 @@ echo "<h1 style='font-weight: bold;'> Welcome, Marvel Superfan! </h1><p>You've s
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694180165169/46adf821-b82a-41b1-9d0a-ae8beeef9fd3.png align="center")
     
 
-## Step 2: Creating Target Group
+### Step 2: Creating Target Group
 
 * Now, Scroll down to the Networking and Mapping where you have to select the VPC and the subnet. Click on Create Target Groups.
     
@@ -182,7 +181,7 @@ echo "<h1 style='font-weight: bold;'> Welcome, Marvel Superfan! </h1><p>You've s
 * Go back to the previous tab of creating load balancer, in the network mapping section, check mark on all the mappings.
     
 
-## Step 3: Creating a Security Group
+### Step 3: Creating a Security Group
 
 * Scroll down, you will find security groups.
     
