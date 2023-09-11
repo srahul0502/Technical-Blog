@@ -11,7 +11,7 @@ tags: devops, terraform, devops-articles, 90daysofdevops, terraweekchallenge
 
 In today's tech-driven world, Infrastructure as Code (IaC) is revolutionizing how we manage infrastructure. Terraform, a remarkable IaC tool developed by HashiCorp, is at the forefront of this transformation. In this beginner-friendly blog post, we'll not only dive into Terraform but also demystify the concept of IaC, complete with examples to help you grasp the fundamental concepts.
 
-# What is Infrastructure as Code (IaC)?
+# 👉What is Infrastructure as Code (IaC)?
 
 **Infrastructure as Code (IaC)** is a methodology that treats infrastructure components, such as servers, networks, databases, and storage, as code. This means you describe and manage your infrastructure through code and automation rather than manual configurations. IaC brings numerous advantages:
 
@@ -26,7 +26,7 @@ In today's tech-driven world, Infrastructure as Code (IaC) is revolutionizing ho
 * **Documentation:** The code itself serves as documentation, making it easier to understand and maintain.
     
 
-# What is Terraform?
+# 👉What is Terraform?
 
 **Terraform** is an IaC tool that streamlines the provisioning and management of infrastructure resources across different cloud providers and services. It leverages a declarative configuration language to define your infrastructure's desired state. Terraform then takes on the responsibility of realizing that state.
 
@@ -36,7 +36,7 @@ Terraform's power lies in its declarative language. Unlike imperative languages 
 
 Now, let's explore how Terraform fits into the IaC landscape, backed by examples.
 
-# Managing Infrastructure as Code with Terraform
+# 👉Managing Infrastructure as Code with Terraform
 
 ### **Example 1: Launching an AWS EC2 Instance**
 
@@ -91,7 +91,7 @@ resource "aws_instance" "example" {
 
 Modules simplify your Terraform code, enhance maintainability, and enable easy reuse across projects.
 
-# Why Terraform? Simplifying Infrastructure Provisioning
+# 👉Why Terraform? Simplifying Infrastructure Provisioning
 
 ### **Why Do We Need Terraform?**
 
@@ -114,7 +114,7 @@ Terraform simplifies infrastructure provisioning in several ways:
 
 Now, let's explore how to get started with Terraform and set up your environment for AWS, Azure, or GCP.
 
-# Installing Terraform and Setting Up the Environment
+# 👉Installing Terraform and Setting Up the Environment
 
 ## Installing Terraform
 
@@ -184,7 +184,7 @@ Before you can start using Terraform, you need to install it on your local machi
     * You should see the installed Terraform version displayed in the output.
         
 
-# Setting Up the Environment
+# 👉Setting Up the Environment
 
 Now that Terraform is installed, let's set up your environment for popular cloud providers like AWS, Azure, and GCP.
 
@@ -251,7 +251,7 @@ Example (Windows PowerShell):
 
 With your AWS, Azure, or GCP environment configured, Terraform can now use the appropriate credentials to interact with these cloud providers when provisioning and managing your infrastructure.
 
-# Key Terraform Terminologies: A Comprehensive Guide
+# 👉Key Terraform Terminologies: A Comprehensive Guide
 
 In the world of Terraform, mastering these five essential terms is your gateway to effective infrastructure management. Let's explore each terminology in greater detail, understand their significance, learn when and why to employ them, and see how they come to life with real-world examples.
 
@@ -387,7 +387,7 @@ In the world of Terraform, mastering these five essential terms is your gateway 
 
 Armed with a profound understanding of these Terraform terminologies and their real-world applications, you're well-equipped to harness Terraform's full potential for streamlined infrastructure management and automation. So, go forth, explore, and shape your infrastructure with confidence!
 
-# Terraform's Configuration Language
+# 👉Terraform's Configuration Language
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694427222428/c8df404e-f619-477d-9a1b-58fc75c5f1af.png align="center")
 
