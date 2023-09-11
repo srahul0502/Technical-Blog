@@ -30,6 +30,10 @@ In today's tech-driven world, Infrastructure as Code (IaC) is revolutionizing ho
 
 **Terraform** is an IaC tool that streamlines the provisioning and management of infrastructure resources across different cloud providers and services. It leverages a declarative configuration language to define your infrastructure's desired state. Terraform then takes on the responsibility of realizing that state.
 
+### Terraform's Declarative Language
+
+Terraform's power lies in its declarative language. Unlike imperative languages that specify how to achieve a task step by step, Terraform allows you to specify what you want your infrastructure to look like, i.e., the desired state. Terraform then figures out the "how" by calculating the necessary steps to reach that state.
+
 Now, let's explore how Terraform fits into the IaC landscape, backed by examples.
 
 # Managing Infrastructure as Code with Terraform
@@ -382,3 +386,20 @@ In the world of Terraform, mastering these five essential terms is your gateway 
     
 
 Armed with a profound understanding of these Terraform terminologies and their real-world applications, you're well-equipped to harness Terraform's full potential for streamlined infrastructure management and automation. So, go forth, explore, and shape your infrastructure with confidence!
+
+# Terraform's Configuration Language
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1694427222428/c8df404e-f619-477d-9a1b-58fc75c5f1af.png align="center")
+
+* Before we wrap up, let's touch on Terraform's configuration language. Terraform uses HashiCorp Configuration Language (HCL) for writing infrastructure code. HCL is designed to be both human-readable and machine-friendly, making it an ideal choice for describing complex infrastructure.
+    
+* HCL provides a clear and concise syntax for defining providers, resources, modules, variables, and outputs. It's intentionally easy to understand, even for those new to infrastructure automation.
+    
+* In HCL, you express your infrastructure in a declarative way, stating what you want without getting bogged down in the specifics of how to achieve it. This approach simplifies code maintenance and collaboration among team members.
+    
+* Terraform's use of HCL empowers you to express your infrastructure needs efficiently and effectively, making infrastructure management as code accessible and powerful.
+    
+
+> Now, you're ready to embark on your Terraform journey with a solid understanding of its key concepts, language, and practical examples.
+> 
+> Happy coding!
