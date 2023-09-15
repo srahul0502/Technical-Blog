@@ -181,7 +181,7 @@ Local state storage in Terraform is like having a diary where you write down eve
 4. **Scalability Issues**: As your project grows, managing state files on individual machines becomes more complex and error-prone.
     
 
-### Remote State Storage: The Collaborative Magic
+## Remote State Storage: The Collaborative Magic
 
 ### What is Remote State?
 
@@ -508,8 +508,8 @@ Implementing remote state storage is a strategic choice in Terraform infrastruct
 4. **Effortless Accessibility**: With state files stored remotely, you can access and manage your infrastructure from anywhere, empowering your team to work effectively, regardless of location.
     
 
-Now, let's explore how to set up AWS S3 as the remote backend for your Terraform state, facilitating these advantages effectively."  
-  
+Now, let's explore how to set up AWS S3 as the remote backend for your Terraform state, facilitating these advantages effectively."
+
 **Step 1: Create Configuration Files**
 
 Imagine this as the first step of building a puzzle. We're going to create some special files that will help Terraform understand what we want to do.
