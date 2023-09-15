@@ -173,7 +173,7 @@ Remote state storage is like having a shared diary in a secure vault that everyo
 
 Storing Terraform state remotely involves using a dedicated remote backend. Here's how it generally works:
 
-#### 1\. Configure Your Backend
+1\. Configure Your Backend
 
 In your Terraform configuration, you set up the backend you want to use, specifying where and how to store your state. Here's an example using AWS S3:
 
