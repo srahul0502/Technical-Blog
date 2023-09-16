@@ -98,7 +98,7 @@ Each module focuses on a specific aspect of your infrastructure, making your Ter
 
 In this beginner-friendly guide, we'll create a Terraform module to encapsulate reusable infrastructure configuration for an AWS EC2 instance. Terraform modules help you organize and reuse your infrastructure code, making it scalable and maintainable. Let's break down the code you provided and explain each part step by step.
 
-### 📁 Essential Files for the Module
+## 📁 Essential Files for the Module
 
 Before diving into the code, let's understand the essential files that make up our Terraform module:
 
@@ -115,7 +115,7 @@ Before diving into the code, let's understand the essential files that make up o
 
 Now, let's explore each file and its role in our module.
 
-### 🚀 Module Code
+## 🚀 Module Code
 
 ### [`terraform.tf`](http://terraform.tf)
 
@@ -346,7 +346,7 @@ By defining these modules in your [`main.tf`](http://main.tf), you can create AW
 
 In today's fast-paced world of cloud computing, efficiently managing infrastructure is paramount. Infrastructure as Code (IaC) is the backbone of this transformation, and Terraform stands as one of the leading IaC tools. Within Terraform, two fundamental concepts, **Modular Composition** and **Module Versioning**, shine as the stars of IaC, offering tremendous potential for creating reusable and maintainable infrastructure configurations.
 
-## 💡 Unraveling the Magic of Modular Composition
+## 💡Unraveling the Magic of Modular Composition
 
 ### **What is Modular Composition?**
 
