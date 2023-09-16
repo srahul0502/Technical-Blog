@@ -11,7 +11,7 @@ tags: devops, terraform, devops-articles, 90daysofdevops, terrafor
 
 Are you ready to embark on a journey into the exciting world of Terraform modules? If you're new to Terraform, you might be wondering what all the buzz is about when it comes to "modules." In this beginner-friendly guide, we'll break down what Terraform modules are, why they're essential, and the incredible benefits they offer.
 
-## 🌟 Unveiling Terraform Modules: Your Infrastructure's Best Friends
+# 🌟 Unveiling Terraform Modules: Your Infrastructure's Best Friends
 
 ### **What Are Modules in Terraform?**
 
@@ -98,7 +98,7 @@ Each module focuses on a specific aspect of your infrastructure, making your Ter
 
 In this beginner-friendly guide, we'll create a Terraform module to encapsulate reusable infrastructure configuration for an AWS EC2 instance. Terraform modules help you organize and reuse your infrastructure code, making it scalable and maintainable. Let's break down the code you provided and explain each part step by step.
 
-## 📁 Essential Files for the Module
+### 📁 Essential Files for the Module
 
 Before diving into the code, let's understand the essential files that make up our Terraform module:
 
@@ -115,7 +115,7 @@ Before diving into the code, let's understand the essential files that make up o
 
 Now, let's explore each file and its role in our module.
 
-## 🚀 Module Code
+### 🚀 Module Code
 
 ### [`terraform.tf`](http://terraform.tf)
 
@@ -209,9 +209,9 @@ resource "aws_dynamodb_table" "my-terra-day5-table" {
 }
 ```
 
-Similarly, if you require a DynamoDB table, you can use this file. It defines a DynamoDB table resource with a naming convention based on your environment and table name.  
-  
-You can also put it in a single file just like below :  
+Similarly, if you require a DynamoDB table, you can use this file. It defines a DynamoDB table resource with a naming convention based on your environment and table name.
+
+You can also put it in a single file just like below :
 
 ```bash
 # Define the required provider and version
@@ -434,7 +434,7 @@ Terraform modules can reside on the Terraform Registry or other version control 
 * **Document Changes**: Keep your module users informed by documenting module changes and version history in the module's README file.
     
 
-## 🏆 In Conclusion: Reusable Modules, Stable Foundations
+### 🏆 In Conclusion: Reusable Modules, Stable Foundations
 
 Modular Composition and Module Versioning are your trusted companions in the Terraform journey. By embracing these concepts, you unlock the potential to build scalable, maintainable, and predictable Infrastructure as Code. Break down your configurations into reusable modules, manage versions diligently, and watch your infrastructure management become a breeze.
 
@@ -444,7 +444,7 @@ These principles not only optimize your workflows but also foster collaboration 
 
 When you're managing your infrastructure using Terraform, maintaining stability is a top priority. You don't want your infrastructure code to break unexpectedly due to changes in module dependencies. To ensure stability and predictability, you can lock Terraform module versions. In this guide, we'll explore two common methods for doing this: using a [`versions.tf`](http://versions.tf) file and the `required_providers` block within your root module.
 
-## Using a [`versions.tf`](http://versions.tf) File
+### Using a [`versions.tf`](http://versions.tf) File
 
 One way to lock Terraform module versions is by creating a [`versions.tf`](http://versions.tf) file in your project directory. This file allows you to specify the required versions of providers and modules and pin the module versions you want to use.
 
@@ -468,7 +468,7 @@ module "example_module" {
 
 In this example, we've pinned the version of the `terraform-aws-modules/vpc/aws` module to `v2.0.0`. When you run `terraform init`, Terraform will use this specific module version.
 
-## Using the `required_providers` Block
+### Using the `required_providers` Block
 
 Another approach to lock module versions is by using the `required_providers` block within your root module's configuration. This method not only locks module versions but also locks the provider version you intend to use.
 
