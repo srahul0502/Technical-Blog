@@ -366,4 +366,6 @@ Congratulations, dear enchanters, on your mesmerizing journey through the mystic
 
 As you continue your adventure, remember that Terraform is a boundless world of magic waiting for you to explore. Whether you choose AWS, Azure, GCP, or other cloud realms, Terraform's enchantments are at your disposal to shape and transform the digital landscape.
 
-Now, go forth and wield your Terraform powers with wisdom and creativity. May your cloud spells always be reliable, your infrastructure code elegant, and your cloud adventures enchanting. Happy conjuring! 🌟
+Now, go forth and wield your Terraform powers with wisdom and creativity. May your cloud spells always be reliable, your infrastructure code elegant, and your cloud adventures enchanting.
+
+Happy Terraforming! 🌟
