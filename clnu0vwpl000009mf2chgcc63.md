@@ -185,8 +185,8 @@ Follow these steps to install Docker on a Linux system.
 
 Docker should download and run the "hello-world" container as a confirmation that Docker is functioning correctly.
 
-Make sure to refer to the official Docker documentation or the documentation specific to your Linux distribution if you encounter any issues, as the exact steps may vary based on your distribution.  
-  
+Make sure to refer to the official Docker documentation or the documentation specific to your Linux distribution if you encounter any issues, as the exact steps may vary based on your distribution.
+
 Refer to this [blog](https://srdev.hashnode.dev/series/docker) for complete understanding and tutorial on installing docker
 
 # 🏗️ Terraform Installation
@@ -234,7 +234,7 @@ Follow these steps to install Terraform on a Linux machine:
 
 This should display the installed Terraform version, confirming that the installation was successful.
 
-## 🏗️ Give Permission to setup-ecrs.sh
+# 🏗️ Give Permission to setup-ecrs.sh
 
 Once you've cloned the repository, navigate to its root directory and grant execute permission to the setup-ecrs.sh script using this command:
 
@@ -242,7 +242,7 @@ Once you've cloned the repository, navigate to its root directory and grant exec
 chmod +x setup-ecrs.sh
 ```
 
-## 🏗️ Create ECR Repository and Send Images to ECR
+# 🏗️ Create ECR Repository and Send Images to ECR
 
 Now, you're ready to create an Amazon Elastic Container Registry (ECR) repository and push Docker images to it.
 
@@ -260,7 +260,7 @@ Ensure that Docker is installed and configured properly, and then run the follow
 
 This script will build and push Docker images to the ECR repository, getting you ready for the next steps.
 
-## 🏗️ Terraform Setup
+# 🏗️ Terraform Setup
 
 **Navigate to the terraform folder within the cloned repository:**
 
