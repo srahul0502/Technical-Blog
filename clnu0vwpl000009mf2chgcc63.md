@@ -116,6 +116,8 @@ With a clear understanding of the architecture, let's delve into the AWS compone
 * **RDS Instance**: The RDS instance serves as the database tier, offering a managed relational database service that is highly available and scalable, ensuring data persistence and reliability.
     
 
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1697531188973/9fd7b066-575f-485e-a504-b2f6e17e69c3.gif align="center")
+
 # 🏗️ Repository Setup
 
 To get started, clone the repository that contains all the necessary configurations and scripts:
