@@ -121,7 +121,7 @@ With a clear understanding of the architecture, let's delve into the AWS compone
 To get started, clone the repository that contains all the necessary configurations and scripts:
 
 ```bash
-git clone https://github.com/heydevopsorg/terrform_threetierarch.git
+git clone https://github.com/srahul0502/terrform_threetierarch
 ```
 
 After cloning, navigate to the repository directory:
