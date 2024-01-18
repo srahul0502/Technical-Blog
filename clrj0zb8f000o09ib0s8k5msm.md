@@ -294,3 +294,8 @@ Embrace the power of version control in GitOps, where every modification is meti
 ### Automation 🤖
 
 Experience the magic of automation in GitOps. Mundane tasks transform into orchestrated wonders, allowing your team to focus on innovation while repetitive processes are handled with precision.
+
+> I hope you understood the concept of GitOps in this blog , will cover the tools and basic project using the same .  
+> Open for Suggestions , please let me know !!  
+> 
+> Happy Learning
