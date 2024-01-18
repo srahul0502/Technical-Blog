@@ -5,7 +5,7 @@ cuid: clrj0zb8f000o09ib0s8k5msm
 slug: gitops-unveiled-journey-into-the-enchanted-realm-of-simplicity
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1705570145455/f1b4b0aa-88ea-430a-9efa-642387d0277f.webp
 ogImage: https://cdn.hashnode.com/res/hashnode/image/upload/v1705570298969/29a89d3d-5b24-4573-bc9d-695f3619c4c8.webp
-tags: github, devops, gitops, 90daysofdevops, trainwithshubham
+tags: github, devops, gitops, devops-articles, 90daysofdevops, trainwithshubham
 
 ---
 
