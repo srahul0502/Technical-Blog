@@ -206,7 +206,7 @@ The Git repository reflects and actively manages the desired state of your infra
 
 Deployments are automated based on changes in the Git repository. Tools like ArgoCD or Flux continuously monitor the repository and automatically apply changes to the target Kubernetes cluster, ensuring the desired state is consistently and seamlessly managed.
 
-## 🕸️Example: Deploying a Microservices Application on Kubernetes
+## Example: Deploying a Microservices Application on Kubernetes
 
 ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705569358141/ba397f42-a7c8-455f-88e5-6dc5a5096819.png align="center")
 
