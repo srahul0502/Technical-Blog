@@ -34,13 +34,13 @@ Various tools work together to create the GitOps framework—Git repositories, K
 
 In the pre-GitOps era, developers faced challenges like manual interventions, a lack of transparency, and inconsistencies across environments. It was like orchestrating a grand symphony without a conductor.
 
-#### Examples:
+Examples:
 
-* **Manual Intervention:** Updates required hands-on interventions, leading to increased error risks.
+* Manual Intervention: Updates required hands-on interventions, leading to increased error risks.
     
-* **Lack of Transparency:** Tracking changes was challenging, creating uncertainty about who, what, and when.
+* Lack of Transparency: Tracking changes was challenging, creating uncertainty about who, what, and when.
     
-* **Inconsistency Across Environments:** Different environments often ended up out of sync, causing headaches for developers.
+* Inconsistency Across Environments: Different environments often ended up out of sync, causing headaches for developers.
     
 
 ## 🕸️GitOps Unveiled: From Principles to Practical Magic
